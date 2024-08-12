@@ -1,19 +1,15 @@
 "use client";
 
-import React from "react";
 import {
 	Sheet,
 	SheetClose,
 	SheetContent,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
 	SheetTrigger,
 } from "@/components/ui/sheet";
+import { sidebarLinks } from "@/constants";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import Footer from "./Footer";
 
@@ -31,7 +27,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
 						className="cursor-pointer"
 					/>
 				</SheetTrigger>
-				<SheetContent side='left' className="border-none bg-white">
+				<SheetContent side="left" className="border-none bg-white">
 					<Link
 						href="/"
 						className="cursor-pointer flex items-center gap-1 px-4">
